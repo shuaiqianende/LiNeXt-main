@@ -1,0 +1,9 @@
+open3d==0.17.0
+cython==0.29.36
+hdbscan==0.8.28
+joblib==1.1.0
+scikit-learn==1.1.3
+natsort==8.1.0
+spconv-cu117==2.3.6
+torchist==0.1.2
+pykeops==2.1.2
