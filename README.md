@@ -79,7 +79,34 @@ The visual comparison is presented below.
   <img src="assets/LiNeXt_Compare_3.png" alt="Compare Image" width="800"/>
 </p>
 
+## 📚 Citation
 
+If you find this project useful in your research or work, please consider citing our paper:
+
+```bibtex
+@misc{he2025linextrevisitinglidarcompletion,
+  title        = {LiNeXt: Revisiting LiDAR Completion with Efficient Non-Diffusion Architectures},
+  author       = {Wenzhe He and Xiaojun Chen and Ruiqi Wang and Ruihui Li and Huilong Pi and Jiapeng Zhang and Zhuo Tang and Kenli Li},
+  year         = {2025},
+  eprint       = {2511.10209},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.CV},
+  url          = {https://arxiv.org/abs/2511.10209}
+}
+## 🙏 Acknowledgements
+
+We sincerely thank the authors of the following open-source projects, which have greatly inspired and supported this work:
+
+- **LiDiff**  
+  https://github.com/PRBonn/LiDiff  
+
+- **ScoreLiDAR**  
+  https://github.com/happyw1nd/ScoreLiDAR  
+
+- **LiDPM**  
+  https://github.com/astra-vision/LiDPM  
+
+These repositories provide valuable baselines and insights for LiDAR scene completion, generative modeling, and diffusion-based methods.
 
 
 
