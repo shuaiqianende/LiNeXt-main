@@ -93,6 +93,8 @@ If you find this project useful in your research or work, please consider citing
   primaryClass = {cs.CV},
   url          = {https://arxiv.org/abs/2511.10209}
 }
+```
+
 ## 🙏 Acknowledgements
 
 We sincerely thank the authors of the following open-source projects, which have greatly inspired and supported this work:
@@ -107,8 +109,6 @@ We sincerely thank the authors of the following open-source projects, which have
   https://github.com/astra-vision/LiDPM  
 
 These repositories provide valuable baselines and insights for LiDAR scene completion, generative modeling, and diffusion-based methods.
-
-
 
 
 
