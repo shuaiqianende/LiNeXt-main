@@ -1,4 +1,5 @@
-# LiNeXt: Revisiting LiDAR Completion with Efficient Non-Diffusion Architectures (AAAI26)
+# LiNeXt: Revisiting LiDAR Completion with Efficient Non-Diffusion Architectures (AAAI26) 
+[Paper](https://arxiv.org/abs/2511.10209)
 
 <p align="center">
   <img src="assets/linext_teaser.png" alt="Teaser Image" width="600"/>
@@ -107,8 +108,6 @@ We sincerely thank the authors of the following open-source projects, which have
 
 - **LiDPM**  
   https://github.com/astra-vision/LiDPM  
-
-These repositories provide valuable baselines and insights for LiDAR scene completion, generative modeling, and diffusion-based methods.
 
 
 
