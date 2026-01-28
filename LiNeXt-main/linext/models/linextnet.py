@@ -276,8 +276,8 @@ def serialization(pos, order="random", grid_size=0.02):
     point_dict.serialization(order=order)
 
     order = point_dict.serialized_order
-    inverse_order = point_dict.serialized_inverse
-    return random.choice([order, inverse_order])
+    # inverse_order = point_dict.serialized_inverse
+    return order
 
 
 class Serial_ATTN(nn.Module):
