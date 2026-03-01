@@ -99,7 +99,9 @@ class LiNextCompletion(LightningModule):
     def complete_scan(self, scan):
         scan, full_scan = self.preprocess_scan(scan)
         x_full_no_noise = repeat_by_distance_quartiles(scan, repeats=self.repeats)
-        x_full = x_full_no_noise
+        # x_full = x_full_no_noise
+        x_full = torch.randn(x_full_no_noise.shape, device=self.device) * self.alpha_noise + x_full_no_noise
+        
         x_cond = scan
         if self.use_refine:
             coarse_pcd, refine_pcd = self.forward_refine(x_full, x_cond)
