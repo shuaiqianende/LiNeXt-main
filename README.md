@@ -58,7 +58,7 @@ To evaluate the metric of the model, please run
 ```
 python3 -m linext.tools.completion_pipeline  --n2c /n2c_ckpt_path --use_eval True
 ```
-- **Noise to Coarse Module**: [Google Drive](https://drive.google.com/file/d/1BLc-CynklfT9UuXls8Guvlxpshpv_JSt/view?usp=sharing)
+- **Noise to Coarse Module**: [Google Drive](https://drive.google.com/file/d/1BLc-CynklfT9UuXls8Guvlxpshpv_JSt/view?usp=drive_link)
 
 
 ## Evaluation
