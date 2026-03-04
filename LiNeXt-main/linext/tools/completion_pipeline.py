@@ -49,13 +49,16 @@ class LiNextCompletion(LightningModule):
         self.model = linextnet.LiNeXt_N2C()
         self.load_state_dict(n2c_ckpt['state_dict'], strict=False)
         self.model.eval()
-        self.cuda()
-
         if refine_path != None:
             self.model_refine = linextnet.LiNeXt_Refine()
+            ckpt_refine = torch.load(refine_path)
+            self.load_state_dict(ckpt_refine['state_dict'], strict=False)
+            self.model_refine.eval()
             self.use_refine = True
         else:
             self.use_refine = False
+
+        self.cuda()
         # for fast sampling
         self.hparams['data']['max_range'] = 50.
         try:
