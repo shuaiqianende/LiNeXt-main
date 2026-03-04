@@ -1,5 +1,7 @@
 # LiNeXt: Revisiting LiDAR Completion with Efficient Non-Diffusion Architectures (AAAI26) 
-[Paper](https://arxiv.org/abs/2511.10209)
+<div align="center">
+  <a href="https://arxiv.org/abs/2511.10209">arxiv</a>
+</div>
 
 <p align="center">
   <img src="assets/linext_teaser.png" alt="Teaser Image" width="600"/>
@@ -58,8 +60,11 @@ To evaluate the metric of the model, please run
 ```
 python3 -m linext.tools.completion_pipeline  --n2c /n2c_ckpt_path --use_eval True
 ```
-- **Noise to Coarse Module**: [Google Drive](https://drive.google.com/file/d/1BLc-CynklfT9UuXls8Guvlxpshpv_JSt/view?usp=drive_link)
-
+## 📦 Model Weights
+| Module | Download |
+|--------|----------|
+| **Noise to Coarse Module** | [Google Drive](https://drive.google.com/file/d/1BLc-CynklfT9UuXls8Guvlxpshpv_JSt/view?usp=drive_link) |
+| **Refine Module** | [Google Drive](https://drive.google.com/file/d/1pyJ2d4smlSrgW5Pe4AxKCHyFE8in2Rlk/view?usp=sharing) |
 
 ## Evaluation
 Reconstruction metrics Chamfer Distance (CD↓), inference time (Time↓), and model parameters (Param↓) are compared as follows:
