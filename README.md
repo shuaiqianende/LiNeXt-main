@@ -60,6 +60,54 @@ To evaluate the metric of the model, please run
 ```
 python3 -m linext.tools.completion_pipeline  --n2c /n2c_ckpt_path --use_eval True
 ```
+### Dataset Preparation
+
+The SemanticKITTI dataset has to be downloaded from the official site and extracted in the following structure:
+
+```text
+└── Datasets/
+    └── SemanticKITTI
+        └── dataset
+          └── sequences
+            ├── 00/
+            │   ├── velodyne/          # Raw point cloud scans (.bin)
+            │   │   ├── 000000.bin
+            │   │   └── ...
+            │   ├── labels/            # Semantic labels (.label)
+            │   │   ├── 000000.label
+            │   │   └── ...
+            │   ├── calib.txt          # Calibration data
+            │   ├── poses.txt          # Ground truth poses
+            │   └── map_clean.npy      # Pre-generated clean map for GT
+            ├── 08/                    # Sequence for validation
+            ├── 11/                    # Sequences 11-21 for testing
+            └── ...
+```
+
+### Static Map generation
+Following LiDiff, we generate the ground complete scenes you can run the map_from_scans_raw.py script.
+```text
+python3 map_from_scans_raw.py --path Datasets/SemanticKITTI/dataset/sequences/
+```
+
+### Ground Truth and Input for Training
+To generate the ground complete scenes (GT) and the filtered sparse scans (Input) in PCD format, run the preprocessing script. This process performs coordinate transformations, dynamic object removal based on labels, and adaptive voxel downsampling to maintain consistent point counts:
+```text
+python3 generate_gtandinput.py
+```
+The script will process each sequence and create ``input/`` and ``gt/`` directories containing ``.pcd`` files:
+```text
+├── 00/
+│   ├── input/      # Preprocessed sparse scans (~18,000 pts, .pcd)
+│   │   ├── 000000.pcd
+│   │   ├── 000001.pcd
+│   │   └── ...
+│   └── gt/         # Dense ground truth scenes (~180,000 pts, .pcd)
+│       ├── 000000.pcd
+│       ├── 000001.pcd
+│       └── ...
+```
+
 ## 📦 Model Weights
 | Module | Download |
 |--------|----------|
