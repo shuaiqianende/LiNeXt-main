@@ -85,7 +85,7 @@ The SemanticKITTI dataset has to be downloaded from the official site and extrac
 ```
 
 ### Static Map generation
-Following LiDiff, we generate the ground complete scenes you can run the map_from_scans_raw.py script.
+Following LiDiff, We generate the ground truth scenes you can run the map_from_scans_raw.py script.
 ```text
 python3 map_from_scans_raw.py --path Datasets/SemanticKITTI/dataset/sequences/
 ```
