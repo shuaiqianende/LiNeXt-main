@@ -220,7 +220,7 @@ PATH_DATA = './KITTI_Odometry/08'
 @click.option('--n2c', '-d', type=str, default=None, help='n2c module checkpoint')
 @click.option('--refine', '-r', type=str, default=None, help='refine module checkpoint')
 @click.option('--path_scan', '-p', type=str, default=None, help='path to the scan sequence')
-@click.option('--use_eval', '-p', type=str, default=False, help='eval the scan sequence')
+@click.option('--use_eval', '-p', type=bool, default=False, help='eval the scan sequence')
 @click.option('--max_range', '-m', type=float, default=50, help='max range')
 def main(n2c, refine, path_scan, use_eval, max_range):
     lidar_completion = LiNextCompletion(n2c, refine)
