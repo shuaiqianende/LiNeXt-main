@@ -260,12 +260,12 @@ def main(n2c, refine, path_scan, use_eval, max_range):
         print(f'CD Mean: {cd_mean}\tCD Std: {cd_std}')
     else:
         os.makedirs(f'{path_scan}/results', exist_ok=True)
-        for pcd_path in tqdm.tqdm(natsorted(os.listdir(path_scan))):
+        for pcd_path in tqdm.tqdm(natsorted(os.listdir(f'{PATH_DATA}/velodyne'))):
             if not (pcd_path.endswith(".bin") or
                     pcd_path.endswith(".ply") or
                     pcd_path.endswith(".pcd")):
                 continue
-            pcd_file = os.path.join(path_scan, pcd_path)
+            pcd_file = os.path.join(PATH_DATA, 'velodyne', pcd_path)
             points = load_pcd(pcd_file)
             complete_point, scan = lidar_completion.complete_scan(points)
 
