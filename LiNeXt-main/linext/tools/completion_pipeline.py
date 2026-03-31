@@ -130,9 +130,13 @@ class LiNextCompletion(LightningModule):
 
     def forward(self, x_full, x_part):
         with torch.no_grad():
+            if torch.cuda.is_available():
+                torch.cuda.synchronize()
             start_time = time.time()
             output = self.model(x_full, x_part)
             p_full = output["p_full"]
+            if torch.cuda.is_available():
+                torch.cuda.synchronize()            
             end_time = time.time()
             print(f"inference time: {end_time - start_time:.4f} 秒")
         return p_full, None
